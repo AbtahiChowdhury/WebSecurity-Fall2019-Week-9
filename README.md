@@ -1,6 +1,6 @@
 # Project 8 - Pentesting Live Targets
 
-Time spent: **X** hours spent in total
+Time spent: **4** hours spent in total
 
 > Objective: Identify vulnerabilities in three different versions of the Globitek website: blue, green, and red.
 
@@ -16,7 +16,13 @@ Each version of the site has been given two of the six vulnerabilities. (In othe
 
 ## Blue
 
-Vulnerability #1: __________________
+Vulnerability #1: SQL Injection
+ - GIF Walkthrough:
+	![](./sqlinjection.gif)
+ - Steps to recreate:
+	- navigate to https://35.184.88.145/blue/public/salesperson.php?id=1
+	- set id equal to 'OR 1=1' --
+	- change blue in the URL to red
 
 Vulnerability #2: __________________
 
