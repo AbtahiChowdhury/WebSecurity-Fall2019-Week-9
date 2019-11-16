@@ -45,12 +45,13 @@ Vulnerability #1: Cross-Site Scripting
 	- cick contact and enter some javascript into the feedback section
 	- click submit, login and go to feedback
 	
-Vulnerability #2: __________________
+Vulnerability #2: User Enumeration
  - GIF Walkthrough:
-	![]()
- - Comment:
+	![](./userenumeration.gif)
+ - Comment: In the green site, if an existing username and wrong password is given, the "Log in was unsuccessful" will be bolded. If a nonexisting username and wrong password is given, the "Log in was unsuccessful" will not be bolded. This is not present in the other sites.
  - Steps to recreate:
-	- 
+	- enter in an existing username and wrong password
+	- enter in a nonexisting username and wrong password
 
 ## Red
 
