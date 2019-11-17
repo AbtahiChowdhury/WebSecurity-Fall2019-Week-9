@@ -42,32 +42,40 @@ Vulnerability #1: Cross-Site Scripting
 	![](./XSS.gif)
  - Comment: The green site has a XSS vulnerability whereas the other sites don't.
  - Steps to recreate:
-	- cick contact and enter some javascript into the feedback section
-	- click submit, login and go to feedback
+	- navigate to https://35.184.88.145/green/public/contact.php
+	- enter some javascript into the feedback section
+	- click submit then login and go to feedback
 	
 Vulnerability #2: User Enumeration
  - GIF Walkthrough:
 	![](./userenumeration.gif)
  - Comment: In the green site, if an existing username and wrong password is given, the "Log in was unsuccessful" will be bolded. If a nonexisting username and wrong password is given, the "Log in was unsuccessful" will not be bolded. This is not present in the other sites.
  - Steps to recreate:
+	- navigate to https://35.184.88.145/green/public/staff/login.php
 	- enter in an existing username and wrong password
 	- enter in a nonexisting username and wrong password
 
 ## Red
 
-Vulnerability #1: __________________
+Vulnerability #1: Insecure Direct Object Referencing
  - GIF Walkthrough:
-	![]()
- - Comment:
+	![](./insecuredirectobjectreferencing.gif)
+ - Comment: In the red site salesperson pages, changing the id parameter on the URL to 10 will show a non-public salesperson. This is not present in the other sites.
  - Steps to recreate:
-	- 
+	- navigate to https://35.184.88.145/red/public/territories.php
+	- click on a salesperson
+	- change the id in the URL to 10
 	
-Vulnerability #2: __________________
+Vulnerability #2: Cross-Site Request Forgery
  - GIF Walkthrough:
-	![]()
- - Comment:
+	![](./XSrequestforgery.gif)
+ - Comment: In the red site, using inspect element, the value of the hidden csrf_token can be changes. This is not present in the other sites.
  - Steps to recreate:
-	- 
+	- navigate to https://35.184.88.145/red/public/staff/login.php
+	- login with pperson and StaR!49*whiz
+	- click on users and edit on any entry
+	- open inspect element and change the value of the hidden csrf_token
+	- click update
 
 ## Notes
 
